@@ -52,41 +52,28 @@ export default async function AdminDashboardPage() {
 
       <div>
         <h3 className="text-base font-semibold mb-3">최근 문의</h3>
-        <Card>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b bg-gray-50 text-left">
-                  <th className="px-4 py-3 font-medium text-gray-600">접수일</th>
-                  <th className="px-4 py-3 font-medium text-gray-600">회사명</th>
-                  <th className="px-4 py-3 font-medium text-gray-600">담당자</th>
-                  <th className="px-4 py-3 font-medium text-gray-600">제품</th>
-                  <th className="px-4 py-3 font-medium text-gray-600">상태</th>
-                </tr>
-              </thead>
-              <tbody>
-                {recentInquiries.map((inq) => (
-                  <tr key={inq.id} className="border-b last:border-0 hover:bg-gray-50">
-                    <td className="px-4 py-3 text-gray-500">{inq.createdAt?.slice(0, 10)}</td>
-                    <td className="px-4 py-3">{inq.company}</td>
-                    <td className="px-4 py-3">{inq.name}</td>
-                    <td className="px-4 py-3">{inq.productName ?? '-'}</td>
-                    <td className="px-4 py-3">
+        {recentInquiries.length === 0 ? (
+          <Card><p className="py-6 text-center text-gray-400">문의가 없습니다.</p></Card>
+        ) : (
+          <div className="space-y-2">
+            {recentInquiries.map((inq) => (
+              <Card key={inq.id}>
+                <div className="flex items-center justify-between gap-2 p-3 md:p-4">
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
                       <Badge variant={statusVariant[inq.status ?? 'new']}>
                         {statusLabel[inq.status ?? 'new']}
                       </Badge>
-                    </td>
-                  </tr>
-                ))}
-                {recentInquiries.length === 0 && (
-                  <tr>
-                    <td colSpan={5} className="px-4 py-6 text-center text-gray-400">문의가 없습니다.</td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
+                      <span className="text-xs text-gray-400">{inq.createdAt?.slice(0, 10)}</span>
+                    </div>
+                    <p className="text-sm font-medium truncate">{inq.company} · {inq.name}</p>
+                    <p className="text-xs text-gray-500 truncate">{inq.productName ?? '-'}</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
           </div>
-        </Card>
+        )}
       </div>
     </div>
   );

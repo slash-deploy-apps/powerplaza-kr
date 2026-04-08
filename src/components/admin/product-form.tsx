@@ -117,7 +117,7 @@ export function ProductForm({
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl">
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="space-y-1">
           <Label>제품명 *</Label>
           <Input value={values.name} onChange={(e) => set('name', e.target.value)} required />
@@ -155,7 +155,7 @@ export function ProductForm({
 
       <div>
         <h3 className="text-sm font-semibold mb-3 text-gray-700">주요 사양</h3>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="space-y-1">
             <Label>입력전압</Label>
             <Input value={values.specInputVoltage ?? ''} onChange={(e) => set('specInputVoltage', e.target.value)} placeholder="e.g. 85-264VAC" />
