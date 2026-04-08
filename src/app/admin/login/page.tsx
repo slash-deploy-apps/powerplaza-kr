@@ -47,7 +47,7 @@ export default function AdminLoginPage() {
                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
               </svg>
             </div>
-            <span className="text-2xl font-bold text-white tracking-tight">PowerPlaza</span>
+            <span className="text-2xl font-bold text-white tracking-tight">Volker Power</span>
           </div>
           <p className="text-[#8891A8] text-sm">관리자 포털</p>
         </div>
@@ -65,7 +65,7 @@ export default function AdminLoginPage() {
             <form onSubmit={handleSignIn} className="space-y-5">
               <div className="space-y-1.5">
                 <Label htmlFor="email" className="text-xs font-medium text-[#454D63] uppercase tracking-wide">이메일</Label>
-                <Input id="email" type="email" placeholder="admin@powerplaza.co.kr" value={email} onChange={(e) => setEmail(e.target.value)} className="h-11 bg-[#F4F5F8] border-[#D8DCE8] focus:bg-white focus:border-[#2654A0] rounded-[6px]" required />
+                <Input id="email" type="email" placeholder="admin@volkerpower.com" value={email} onChange={(e) => setEmail(e.target.value)} className="h-11 bg-[#F4F5F8] border-[#D8DCE8] focus:bg-white focus:border-[#2654A0] rounded-[6px]" required />
               </div>
               <div className="space-y-1.5">
                 <Label htmlFor="password" className="text-xs font-medium text-[#454D63] uppercase tracking-wide">비밀번호</Label>
@@ -84,7 +84,7 @@ export default function AdminLoginPage() {
           </div>
         </div>
 
-        <p className="text-center text-[#636D87] text-xs mt-6">© 2024 PowerPlaza. 관리자 전용 페이지입니다.</p>
+        <p className="text-center text-[#636D87] text-xs mt-6">© 2025 Volker Power. 관리자 전용 페이지입니다.</p>
       </div>
     </div>
   );

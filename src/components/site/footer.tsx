@@ -8,12 +8,12 @@ export function Footer() {
           {/* 회사소개 */}
           <div>
             <div className="mb-3">
-              <span className="text-white font-bold text-lg">PowerPlaza</span>
-              <span className="block text-[#4D7CC5] text-xs mt-0.5">파워프라자</span>
+              <span className="text-white font-bold text-lg">Volker Power</span>
+              <span className="block text-[#4D7CC5] text-xs mt-0.5">VOLKER POWER PTE. LTD.</span>
             </div>
             <p className="text-xs leading-relaxed">
-              순정사인파 인버터 및 SMPS 전문업체<br />
-              Volker Power 국내 공식 공급 파트너
+              순정사인파 인버터 전문 기업<br />
+              VOLKER POWER PTE. LTD. 싱가포르 본사 직접 운영
             </p>
           </div>
 
@@ -41,16 +41,16 @@ export function Footer() {
           <div>
             <h4 className="text-white text-sm font-semibold mb-3">연락처</h4>
             <ul className="space-y-2 text-xs">
-              <li>Email: info@powerplaza.co.kr</li>
-              <li>Tel: 02-0000-0000</li>
-              <li>서울특별시 구로구</li>
+              <li>Email: admin@volkerpower.com</li>
+              <li>Tel: +65 8285-8965</li>
+              <li>266A South Bridge Road #02-01, Singapore 058815</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-10 pt-6 border-t border-[#1E293B] text-xs text-[#4A5568]">
-          <p>파워프라자 | 사업자등록번호: 000-00-00000 | 대표: 파워프라자 | &copy; 2024 PowerPlaza. All rights reserved.</p>
-          <p className="mt-1">Volker Power 국내 공식 공급 파트너 | 제품 문의: info@powerplaza.co.kr</p>
+          <p>VOLKER POWER PTE. LTD. | 266A South Bridge Road #02-01, Singapore 058815 | &copy; 2025 Volker Power. All rights reserved.</p>
+          <p className="mt-1">제품 문의: admin@volkerpower.com | Tel: +65 8285-8965</p>
         </div>
       </div>
     </footer>

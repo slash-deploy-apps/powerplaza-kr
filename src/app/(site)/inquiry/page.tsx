@@ -97,7 +97,7 @@ function InquiryForm() {
             type="text"
             value={form.company}
             onChange={(e) => setForm(f => ({ ...f, company: e.target.value }))}
-            placeholder="주식회사 파워프라자"
+            placeholder="주식회사 ABC"
             className="w-full px-3 py-2 border border-[#D8DCE8] rounded-[6px] text-sm focus:outline-none focus:border-[#2654A0] focus:ring-1 focus:ring-[#2654A0]"
           />
           {errors.company && <p className="text-xs text-red-500 mt-1">{errors.company}</p>}
@@ -108,7 +108,7 @@ function InquiryForm() {
             type="email"
             value={form.email}
             onChange={(e) => setForm(f => ({ ...f, email: e.target.value }))}
-            placeholder="info@company.com"
+            placeholder="you@company.com"
             className="w-full px-3 py-2 border border-[#D8DCE8] rounded-[6px] text-sm focus:outline-none focus:border-[#2654A0] focus:ring-1 focus:ring-[#2654A0]"
           />
           {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email}</p>}
@@ -119,7 +119,7 @@ function InquiryForm() {
             type="tel"
             value={form.phone}
             onChange={(e) => setForm(f => ({ ...f, phone: e.target.value }))}
-            placeholder="02-0000-0000"
+            placeholder="+82-10-0000-0000"
             className="w-full px-3 py-2 border border-[#D8DCE8] rounded-[6px] text-sm focus:outline-none focus:border-[#2654A0] focus:ring-1 focus:ring-[#2654A0]"
           />
         </div>
@@ -175,7 +175,7 @@ export default function InquiryPage() {
     <div className="max-w-2xl mx-auto px-4 py-12">
       <div className="mb-8">
         <p className="text-xs font-semibold uppercase tracking-wide text-[#636D87] mb-1">견적 문의</p>
-        <h1 className="text-2xl font-bold text-[#0F2240]">Volker Power 제품 곭적 문의</h1>
+        <h1 className="text-2xl font-bold text-[#0F2240]">Volker Power 제품 견적 문의</h1>
         <p className="text-sm text-[#636D87] mt-2">제품명과 수량, 사용 환경을 알려주시면 48시간 이내 회신합니다.</p>
       </div>
       <div className="bg-white border border-[#D8DCE8] rounded-[6px] p-6">

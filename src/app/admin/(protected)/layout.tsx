@@ -14,7 +14,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       <AdminSidebar />
       <div className="flex flex-1 flex-col overflow-hidden">
         <header className="border-b bg-white px-6 py-4">
-          <h1 className="text-lg font-semibold text-[#0F2240]">PowerPlaza 관리자</h1>
+          <h1 className="text-lg font-semibold text-[#0F2240]">Volker Power 관리자</h1>
         </header>
         <main className="flex-1 overflow-y-auto p-6">
           {children}

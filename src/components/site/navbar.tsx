@@ -22,9 +22,9 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex flex-col leading-tight">
           <span className="text-white font-bold text-xl tracking-tight" style={{ fontFamily: 'Pretendard Variable, Pretendard, sans-serif' }}>
-            PowerPlaza
+            Volker Power
           </span>
-          <span className="text-[#7B9DD3] text-[10px] tracking-wide">Volker Power 공식 파트너</span>
+          <span className="text-[#7B9DD3] text-[10px] tracking-wide">Global Inverter Manufacturer</span>
         </Link>
 
         {/* Desktop Nav */}

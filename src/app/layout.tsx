@@ -5,8 +5,8 @@ import { type Metadata } from 'next';
 import { TRPCReactProvider } from '~/trpc/react';
 
 export const metadata: Metadata = {
-  title: '파워프라자 | Volker Power 국내 공식 공급',
-  description: 'Volker Power 순정사인파 인버터 및 전원공급장치 국내 공식 공급. 파워프라자에서 CE/RoHS 인증 제품을 믿고 구매하세요.',
+  title: 'Volker Power | Global Inverter Manufacturer',
+  description: 'Volker Power - 순정사인파 인버터, UPS 인버터, 하이브리드 태양광 인버터, 마이크로 인버터, PCBA 모듈. 117개국 수출, CE/RoHS/ISO9001 인증. 싱가포르 본사 직접 운영.',
   icons: [{ rel: 'icon', url: '/favicon.ico' }],
 };
 

@@ -23,7 +23,7 @@ export function AdminSidebar() {
   return (
     <aside className="flex w-56 flex-col bg-[#0F2240] text-white">
       <div className="px-6 py-5 border-b border-white/10">
-        <span className="font-bold text-lg tracking-tight">PowerPlaza</span>
+        <span className="font-bold text-lg tracking-tight">Volker Power</span>
       </div>
       <nav className="flex-1 px-3 py-4 space-y-1">
         {navItems.map((item) => (
