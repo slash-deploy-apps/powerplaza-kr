@@ -5,7 +5,7 @@ import { env } from '~/env';
 import { db } from '~/server/db';
 
 export const auth = betterAuth({
-  baseURL: env.BETTER_AUTH_URL,
+  baseURL: env.BETTER_AUTH_URL ?? `http://localhost:${process.env.PORT ?? 3000}`,
   database: drizzleAdapter(db, {
     provider: 'sqlite',
   }),
@@ -15,13 +15,13 @@ export const auth = betterAuth({
   trustedOrigins: [
     'http://localhost:3000',
     'http://localhost:3001',
-    env.BETTER_AUTH_URL,
+    env.BETTER_AUTH_URL ?? `http://localhost:${process.env.PORT ?? 3000}`,
   ],
   socialProviders: {
     github: {
       clientId: env.BETTER_AUTH_GITHUB_CLIENT_ID,
       clientSecret: env.BETTER_AUTH_GITHUB_CLIENT_SECRET,
-      redirectURI: `${env.BETTER_AUTH_URL}/api/auth/callback/github`,
+      redirectURI: `${env.BETTER_AUTH_URL ?? `http://localhost:${process.env.PORT ?? 3000}`}/api/auth/callback/github`,
     },
   },
 });
