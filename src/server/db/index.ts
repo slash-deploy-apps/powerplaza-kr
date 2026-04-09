@@ -12,8 +12,15 @@ const globalForDb = globalThis as unknown as {
   client: Client | undefined;
 };
 
+const authToken = env.DATABASE_AUTH_TOKEN;
+if (!authToken && env.DATABASE_URL.startsWith('libsql://')) {
+  throw new Error(
+    'DATABASE_AUTH_TOKEN is required when using Turso (libsql:// URL). Set it in your deployment environment variables.'
+  );
+}
+
 export const client =
-  globalForDb.client ?? createClient({ url: env.DATABASE_URL, authToken: env.DATABASE_AUTH_TOKEN });
+  globalForDb.client ?? createClient({ url: env.DATABASE_URL, authToken });
 if (env.NODE_ENV !== 'production') globalForDb.client = client;
 
 export const db = drizzle(client, { schema });
