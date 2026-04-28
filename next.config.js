@@ -6,7 +6,10 @@ import './src/env.js';
 
 /** @type {import("next").NextConfig} */
 const config = {
-  allowedDevOrigins: ['3001-iefnxvsruubzpl92jm8ce.e2b.app'],
+  allowedDevOrigins: [
+    '3001-iefnxvsruubzpl92jm8ce.e2b.app',
+    '4321-i79s36sgsmtevlasz8kms.e2b.app',
+  ],
   images: {
     remotePatterns: [
       {
