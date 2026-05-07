@@ -5,6 +5,13 @@ import { env } from '~/env';
 import { db } from '~/server/db';
 
 export const auth = betterAuth({
+  advanced: {
+    defaultCookieAttributes: {
+      sameSite: 'none',
+      secure: true,
+      partitioned: true,
+    },
+  },
   baseURL: env.BETTER_AUTH_URL ?? `http://localhost:${process.env.PORT ?? 3000}`,
   database: drizzleAdapter(db, {
     provider: 'sqlite',
